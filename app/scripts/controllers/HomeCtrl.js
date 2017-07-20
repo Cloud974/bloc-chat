@@ -1,6 +1,7 @@
 (function() {
     function HomeCtrl(Room) {
-      this.heroTitle = "Speak easy friendo";
+      this.rooms = Room.all;
+      
     }
 
     angular

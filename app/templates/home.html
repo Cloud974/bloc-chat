@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<nav class="navbar">
+  <h1>Bloc chat</h1>
+  <div class="room-list" ng-repeat="room in home.rooms">
+    <h2>{{room.$value}}</h2>
+  </div>
+  <span class="new-room-button" type= "button">+</span>
+</nav>

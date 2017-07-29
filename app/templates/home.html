@@ -1,8 +1,7 @@
 <nav class="navbar">
   <h1>Bloc chat</h1>
-  <h2>Rooms:</h2>
+  <h2>Rooms:<a class="ion-plus-circled" type= "button" ng-click="home.addRoom()"></a></h2>
   <div class="room-list" ng-repeat="room in home.rooms">
     <h2>{{room.$value}}</h2>
   </div>
-  <span class="new-room-button" type= "button" ng-click="home.addRoom()">Add</span>
 </nav>

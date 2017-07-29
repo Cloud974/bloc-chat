@@ -3,7 +3,8 @@ html {
     height: 100%;
     font-size: 100%;
     background-color: rgb(250, 250, 250);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans';
+    font-weight: 300;
 }
 
 body {

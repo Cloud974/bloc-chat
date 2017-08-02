@@ -2,6 +2,19 @@
   <h1>Bloc chat</h1>
   <h2>Rooms:<a class="ion-plus-circled" type= "button" ng-click="home.addRoom()"></a></h2>
   <div class="room-list" ng-repeat="room in home.rooms">
-    <h2>{{room.$value}}</h2>
+    <h3 ng-click="home.setCurrentRoom(room)" ng-class="{'active': home.currentRoom.$value === room.$value}">{{room.$value}}</h3>
   </div>
 </nav>
+
+<div class="chat-view">
+  <h1>{{ home.currentRoom.$value }}</h1>
+  <div class="messages" ng-repeat='message in home.messages'>
+    <div class"username">{{ message.username }}</div>
+    <h3 class="message">{{ message.content }}</h3>
+    <div class="timestamp">{{ message.sentAt }}</div>
+  </div>
+  <div class="input">
+    <input type="text" placeholder="Type messages here..." class="input-field">
+    <button class="send" type="button">Send message</button>
+  </div>
+</div>

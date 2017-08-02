@@ -9,8 +9,8 @@
 <div class="chat-view">
   <h1>{{ home.currentRoom.$value }}</h1>
   <div class="messages" ng-repeat='message in home.messages'>
-    <div class"username">{{ message.username }}</div>
-    <h3 class="message">{{ message.content }}</h3>
+    <div class="username">{{home.isFirstMsg($index, home.messages) ? message.username+':':''}}</div>
+    <div class="message"><p>{{ message.content }}</p></div>
     <div class="timestamp">{{ message.sentAt }}</div>
   </div>
   <div class="input">

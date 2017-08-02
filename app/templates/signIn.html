@@ -1,0 +1,11 @@
+<section class="modal">
+    <div class="sign-in-head">
+      <h3>Sign In</h3>
+    </div>
+    <div class="username-input">
+      <input type="text" name="input" ng-model="modal.username" required>
+    </div>
+    <div class="sign-in">
+        <button type="submit" name="submit" ng-click='modal.createUsername()' ng-disabled='modal.username == null'>Submit</button>
+    </div>
+</section>

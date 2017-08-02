@@ -17,7 +17,18 @@
             home.messages = Message.getByRoomId(home.currentRoom.$id);
             console.log(home.currentRoom);
         }
+
+        home.isFirstMsg = function (index, messages) {
+
+          if (index > 0 && messages[index].username === messages[index-1].username) {
+            return false;
+          }else {
+            return true;
+          }
+        }
+
     }
+
 
     angular
         .module('blocChat')

@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
+    height: 100%;
     background: linear-gradient(rgb(0, 25, 52), rgb(0, 75, 130));
     font-family: "Open Sans";
     font-weight: 300;

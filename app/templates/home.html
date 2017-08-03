@@ -7,14 +7,14 @@
 </nav>
 
 <div class="chat-view">
-  <h1>{{ home.currentRoom.$value }}</h1>
+  <h1 ng-if"home.currentRoom.value">{{ home.currentRoom.$value }}</h1>
   <div class="messages" ng-repeat='message in home.messages'>
     <div class="username">{{home.isFirstMsg($index, home.messages) ? message.username+':':''}}</div>
     <div class="message"><p>{{ message.content }}</p></div>
-    <div class="timestamp">{{ message.sentAt }}</div>
+    <div class="timestamp">{{ message.sentAt | date: "shortTime" }}</div>
   </div>
   <div class="input">
-    <input type="text" placeholder="Type messages here..." class="input-field">
-    <button class="send" type="button">Send message</button>
+    <input type="text" placeholder="Type messages here..." class="input-field" ng-model="home.newMessage.content">
+    <button class="send" type="button" ng-click='home.sendMsg()'>Send message</button>
   </div>
 </div>

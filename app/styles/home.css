@@ -50,7 +50,7 @@
     text-transform: capitalize;
 }
 
-h3:hover {
+.room-list h3:hover {
     color: white;
     font-size: 20px;
     margin: 3px;

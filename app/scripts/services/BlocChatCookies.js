@@ -6,7 +6,6 @@
       $uibModal.open({
           templateUrl: '/templates/signIn.html',
           controller: 'ModalCtrl as modal',
-          size: 'sm'
       });
     }
   }
